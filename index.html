@@ -1,273 +1,3 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Study - একাদশ-দ্বাদশ </title>
-
-<style>
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
-    background:#f5f7fa;
-    color:#222;
-}
-
-header{
-    background:linear-gradient(135deg,#173f5f,#20639b);
-    color:white;
-    text-align:center;
-    padding:22px 15px;
-}
-
-header h1{
-    margin:0;
-    font-size:32px;
-}
-
-header p{
-    margin:7px 0 0;
-    font-size:16px;
-}
-
-.container{
-    width:94%;
-    max-width:900px;
-    margin:20px auto;
-}
-
-.banner{
-    background:linear-gradient(135deg,#ff9800,#ff5722);
-    color:white;
-    min-height:150px;
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:25px;
-    margin-bottom:22px;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-}
-
-.banner h2{
-    margin:0;
-    font-size:28px;
-}
-
-.banner p{
-    margin:8px 0 0;
-    font-size:17px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:18px;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-label{
-    display:block;
-    font-weight:bold;
-    margin-bottom:8px;
-}
-
-select{
-    width:100%;
-    padding:13px;
-    border:1px solid #ccc;
-    border-radius:9px;
-    font-size:16px;
-    background:white;
-    margin-bottom:15px;
-}
-
-.chapter-title{
-    font-size:21px;
-    font-weight:bold;
-    color:#173f5f;
-    margin-bottom:5px;
-}
-
-.page{
-    color:#777;
-    font-size:14px;
-    margin-bottom:12px;
-}
-
-.lesson-box{
-    background:#f8fafc;
-    border:1px solid #e1e5ea;
-    padding:15px;
-    border-radius:10px;
-    margin-top:15px;
-}
-
-.lesson-box h2{
-    margin-top:0;
-    color:#173f5f;
-}
-
-.content{
-    line-height:1.9;
-    font-size:17px;
-    white-space:pre-line;
-}
-
-.question{
-    background:#fff8e1;
-    border-left:5px solid #ff9800;
-    padding:15px;
-    margin-top:15px;
-    border-radius:8px;
-}
-
-.answer{
-    background:#eef7ee;
-    border-left:5px solid #4caf50;
-    padding:15px;
-    margin-top:10px;
-    border-radius:8px;
-}
-
-.free{
-    display:inline-block;
-    background:#2e7d32;
-    color:white;
-    padding:4px 9px;
-    border-radius:20px;
-    font-size:12px;
-}
-
-.paid{
-    display:inline-block;
-    background:#d32f2f;
-    color:white;
-    padding:4px 9px;
-    border-radius:20px;
-    font-size:12px;
-}
-
-.buy-btn{
-    display:inline-block;
-    background:#ff6d00;
-    color:white;
-    text-decoration:none;
-    padding:13px 22px;
-    border-radius:8px;
-    font-weight:bold;
-    margin-top:12px;
-}
-
-.buy-btn:hover{
-    background:#e65100;
-}
-
-.hidden{
-    display:none;
-}
-
-footer{
-    text-align:center;
-    background:#173f5f;
-    color:white;
-    padding:20px;
-    margin-top:30px;
-}
-
-@media(max-width:600px){
-    header h1{
-        font-size:26px;
-    }
-
-    .banner h2{
-        font-size:22px;
-    }
-
-    .content{
-        font-size:16px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>STUDY</h1>
-    <p>Islamic Studies </p>
-</header>
-
-<div class="container">
-
-    <!-- Banner -->
-    <div class="banner">
-        <div>
-            <h2>অনলাইন স্টাডি</h2>
-            <p>ইসলাম শিক্ষা</p>
-        </div>
-    </div>
-
-    <!-- Class -->
-    <div class="card">
-        <label>শ্রেণি নির্বাচন করুন</label>
-
-        <select id="classSelect">
-            <option value="">-- শ্রেণি নির্বাচন করুন --</option>
-            <option value="class11">একাদশ</option>
-            <option value="class12">দ্বাদশ</option>
-        </select>
-
-        <div id="subjectArea" class="hidden">
-
-            <label>বিষয় নির্বাচন করুন</label>
-
-            <select id="subjectSelect">
-                <option value="">-- বিষয় নির্বাচন করুন --</option>
-                <option value="islamic">ইসলামিক স্টাডিজ প্রথম পত্র</option>
-            </select>
-
-        </div>
-
-        <div id="chapterArea" class="hidden">
-
-            <label>অধ্যায় নির্বাচন করুন</label>
-
-            <select id="chapterSelect">
-                <option value="">-- অধ্যায় নির্বাচন করুন --</option>
-            </select>
-
-        </div>
-
-        <div id="lessonArea" class="hidden">
-
-            <label>পাঠ নির্বাচন করুন</label>
-
-            <select id="lessonSelect">
-                <option value="">-- পাঠ নির্বাচন করুন --</option>
-            </select>
-
-        </div>
-
-    </div>
-
-    <!-- Lesson -->
-    <div id="lessonContent" class="card hidden"></div>
-
-</div>
-
-<footer>
-    <p>© 2026 STUDY | Islamic Studies</p>
-</footer>
-
-
 <script>
 
 /* =====================================================
@@ -277,12 +7,15 @@ footer{
 const SHUKHIMART_URL =
 "https://shukhimart.com.bd/product/online-book-UDzKcg";
 
+const PAYMENT_SUCCESS_URL =
+"https://app.shukhimart.com.bd/sslcommerz/success";
+
 
 /* =====================================================
-   CHAPTER DATA
+   একাদশ — ইসলাম শিক্ষা ১ম পত্র
 ===================================================== */
 
-const chapters = [
+const chapters11 = [
 
 {
     id:1,
@@ -478,13 +211,198 @@ const chapters = [
 
 
 /* =====================================================
-   BOOK END
+   দ্বাদশ — ইসলাম শিক্ষা ২য় পত্র
 ===================================================== */
 
-const bookEnd = [
-    "সহায়ক গ্রন্থসমূহ",
-    "পরিশিষ্ট",
-    "বোর্ড পরীক্ষার প্রশ্নপত্র"
+const chapters12 = [
+
+{
+    id:1,
+    title:"প্রথম অধ্যায়: আল-কুরআন",
+    pages:"দ্বাদশ শ্রেণি — ইসলাম শিক্ষা ২য় পত্র",
+    free:true,
+
+    lessons:[
+        "আল-কুরআনের পরিচয়",
+        "আল-কুরআনের বৈশিষ্ট্য",
+        "আল-কুরআনের গুরুত্ব ও মাহাত্ম্য",
+        "আল-কুরআনের কতিপয় নাম",
+        "আল-কুরআনের আলোচ্য বিষয়",
+        "কুরআন তিলাওয়াতের গুরুত্ব ও ফজিলত",
+        "আল-কুরআন অবতরণ",
+        "কুরআন শিক্ষার গুরুত্ব",
+        "ওহি ও শানে নুযুল",
+        "মক্কি ও মাদানি সূরার বৈশিষ্ট্য",
+        "আল-কুরআনের সংরক্ষণ",
+        "আল-কুরআন সংকলন",
+        "আদর্শ জীবন গঠনে আল-কুরআনের ভূমিকা",
+        "সূরা আল-বাকারার পরিচিতি ও নামকরণ",
+        "সূরা আল-বাকারা নাজিলের সময়কাল ও শানে নুযুল",
+        "সূরা আল-বাকারার বিষয়বস্তু",
+        "সূরা আল-বাকারার ১ম রুকু : অনুবাদ ও ব্যাখ্যা",
+        "সূরা আল-বাকারার ২য় রুকু : অনুবাদ ও ব্যাখ্যা",
+        "সূরা আল-বাকারার ৩য় রুকু : অনুবাদ ও ব্যাখ্যা",
+        "সূরা আল-বাকারার ৪র্থ রুকু : অনুবাদ ও ব্যাখ্যা",
+        "সূরা আল-বাকারার ৫ম রুকু : অনুবাদ ও ব্যাখ্যা",
+        "সূরা আল-বাকারার ৬ষ্ঠ রুকু : অনুবাদ ও ব্যাখ্যা",
+        "সূরা আল-বাকারার আলোকে মুনাফিকের পরিচয়",
+        "সূরা আল-বাকারার আলোকে কাফিরের পরিচয়",
+        "সূরা আল-বাকারার আলোকে মুনাফিকদের পরিচয়",
+        "হযরত আদম (আ.)-এর সৃষ্টি এবং পৃথিবীতে অবতরণের ইতিহাস",
+        "ইবলিসের পরিচয়",
+        "ফিরাউনের পরিচয়",
+        "বনি ইসরাইল জাতি ও তাদের প্রতি আল্লাহর অনুগ্রহ",
+        "বনি ইসরাইলের দুষ্কর্মের বিবরণ",
+        "গো-বৎস পূজার ঘটনা"
+    ]
+},
+
+{
+    id:2,
+    title:"দ্বিতীয় অধ্যায়: আল-হাদিস",
+    pages:"দ্বাদশ শ্রেণি — ইসলাম শিক্ষা ২য় পত্র",
+    free:false,
+
+    lessons:[
+        "হাদিসের পরিচয়",
+        "রাবি, সনদ ও মতন",
+        "হাদিস, সুন্নাহ, আছার ও খবর",
+        "আল-কুরআনের সাথে হাদিসের সম্পর্ক ও পার্থক্য",
+        "ইতিহাস রচনায় হাদিসের ভূমিকা",
+        "হাদিস সংরক্ষণ",
+        "হাদিস সংকলন",
+        "সিহাহ সিত্তাহ ও প্রসিদ্ধ ছয় ইমাম",
+        "হাদিসের গুরুত্ব ও প্রয়োজনীয়তা",
+        "হাদিসের প্রকারভেদ",
+        "নৈতিক জীবন গঠনে হাদিসের ভূমিকা",
+        "মহানবি (সা.)-এর পঁচিশটি হাদিসের অনুবাদ, ব্যাখ্যা ও শিক্ষা",
+        "১ নম্বর হাদিস — ইসলামের মূলভিত্তি সম্পর্কিত",
+        "২ নম্বর হাদিস — ঈমানের শাখা-প্রশাখা সম্পর্কিত",
+        "৩ নম্বর হাদিস — রাসূলুল্লাহ (সা.)-এর প্রতি ভালোবাসা সম্পর্কিত",
+        "৪ নম্বর হাদিস — মুনাফিকদের নিদর্শন সম্পর্কিত",
+        "৫ নম্বর হাদিস — সত্য গ্রহণ ও মিথ্যা বর্জন সম্পর্কিত",
+        "৬ নম্বর হাদিস — মহান আল্লাহর পথে দান ও জিহাদি বৃত্তি সম্পর্কিত",
+        "৭ নম্বর হাদিস — ভ্রাতৃত্ববোধ সম্পর্কিত",
+        "৮ নম্বর হাদিস — বন্ধু নির্বাচন সম্পর্কিত",
+        "৯ নম্বর হাদিস — কর্তব্য ও পরোপকার সম্পর্কিত",
+        "১০ নম্বর হাদিস — ক্রোধ নিয়ন্ত্রণ সম্পর্কিত",
+        "১১ নম্বর হাদিস — জুলুমের প্রতিরোধ ও মজলুমের সাহায্য সম্পর্কিত",
+        "১২ নম্বর হাদিস — অশ্লীলতা সম্পর্কিত",
+        "১৩ নম্বর হাদিস — ঈমানের প্রতিবন্ধক দোষাবলি সম্পর্কিত",
+        "১৪ নম্বর হাদিস — বৃক্ষরোপণ সম্পর্কিত",
+        "১৫ নম্বর হাদিস — ব্যবসায়ে সততা সম্পর্কিত",
+        "১৬ নম্বর হাদিস — ঋণের অশুভ পরিণতি সম্পর্কিত",
+        "১৭ নম্বর হাদিস — দাতার মর্যাদা সম্পর্কিত",
+        "১৮ নম্বর হাদিস — দায়িত্বশীলতা ও জবাবদিহিতা সম্পর্কিত",
+        "১৯ নম্বর হাদিস — মহান আল্লাহর রাস্তায় জিহাদ সম্পর্কিত",
+        "২০ নম্বর হাদিস — হালাল উপার্জন সম্পর্কিত",
+        "২১ নম্বর হাদিস — মাদকদ্রব্যের অশুভ পরিণতি সম্পর্কিত",
+        "২২ নম্বর হাদিস — হারামের পরিণতি সম্পর্কিত",
+        "২৩ নম্বর হাদিস — মৃত্যুর পরবর্তীও আমলনামা জারি সম্পর্কিত",
+        "২৪ নম্বর হাদিস — কুরবানির সম্পর্কিত",
+        "২৫ নম্বর হাদিস"
+    ]
+},
+
+{
+    id:3,
+    title:"তৃতীয় অধ্যায়: আল-ইজমা",
+    pages:"দ্বাদশ শ্রেণি — ইসলাম শিক্ষা ২য় পত্র",
+    free:false,
+
+    lessons:[
+        "ইজমার উৎপত্তির ইতিহাস",
+        "ইজমার পরিচয়",
+        "ইজমার প্রকারভেদ",
+        "ইজমার পদ্ধতি ও রুকন",
+        "ইজমার আহল বা ইজমাকারীদের যোগ্যতা",
+        "ইজমার শর্তসমূহ",
+        "ইজমার স্তর ও হুকুম",
+        "ইজমার গুরুত্ব ও প্রয়োজনীয়তা"
+    ]
+},
+
+{
+    id:4,
+    title:"চতুর্থ অধ্যায়: আল-কিয়াস",
+    pages:"দ্বাদশ শ্রেণি — ইসলাম শিক্ষা ২য় পত্র",
+    free:false,
+
+    lessons:[
+        "কিয়াসের উৎপত্তির ইতিহাস",
+        "কিয়াসের পরিচয়",
+        "কিয়াসের রুকন",
+        "কিয়াসের প্রকারভেদ",
+        "কিয়াসের শর্তসমূহ",
+        "কিয়াসের মূলনীতি ও হুকুম",
+        "কিয়াসের গুরুত্ব ও প্রয়োজনীয়তা",
+        "কিয়াস ইসলামী আইনের উৎস কি না"
+    ]
+},
+
+{
+    id:5,
+    title:"পঞ্চম অধ্যায়: ফিকহশাস্ত্র",
+    pages:"দ্বাদশ শ্রেণি — ইসলাম শিক্ষা ২য় পত্র",
+    free:false,
+
+    lessons:[
+        "ফিকহশাস্ত্রের পরিচয়",
+        "ফিকহশাস্ত্রের লক্ষ্য, উদ্দেশ্য ও বিষয়বস্তু",
+        "ফিকহশাস্ত্রের উৎপত্তি ও ক্রমবিকাশ",
+        "ফিকহশাস্ত্রের গুরুত্ব ও প্রয়োজনীয়তা",
+        "মাযহাবের সংজ্ঞা এবং বিভিন্ন মাযহাব উৎপত্তির কারণ",
+        "হানাফি মাযহাব",
+        "মালিকি মাযহাব",
+        "শাফিঈ মাযহাব",
+        "হাম্বলি মাযহাব",
+        "চার ইমামের সংক্ষিপ্ত পরিচিতি: ইমাম আবু হানিফা (রহ.)",
+        "ইমাম মালিক (রহ.)",
+        "ইমাম শাফিঈ (রহ.)",
+        "ইমাম আহমদ ইবনে হাম্বল (রহ.)"
+    ]
+},
+
+{
+    id:6,
+    title:"ষষ্ঠ অধ্যায়: মৌলিক ইবাদত",
+    pages:"দ্বাদশ শ্রেণি — ইসলাম শিক্ষা ২য় পত্র",
+    free:false,
+
+    lessons:[
+        "ইবাদতের পরিচয় ও প্রকারভেদ",
+        "ইবাদতের গুরুত্ব ও তাৎপর্য",
+        "সালাতের গুরুত্ব",
+        "সালাতের শিক্ষা",
+        "যাকাতের গুরুত্ব",
+        "যাকাতের শিক্ষা",
+        "সাওমের গুরুত্ব",
+        "সাওমের শিক্ষা",
+        "হজের গুরুত্ব",
+        "হজের শিক্ষা"
+    ]
+},
+
+{
+    id:7,
+    title:"সপ্তম অধ্যায়: তাসাউফ",
+    pages:"দ্বাদশ শ্রেণি — ইসলাম শিক্ষা ২য় পত্র",
+    free:false,
+
+    lessons:[
+        "তাসাউফের পরিচয় ও উদ্দেশ্য",
+        "তাসাউফের উৎপত্তি",
+        "তাসাউফের ক্রমবিকাশ",
+        "শরিয়ত ও তাসাউফের মধ্যে সম্পর্ক",
+        "তাসাউফের গুরুত্ব ও প্রয়োজনীয়তা",
+        "আত্মাকে সুস্থ ও পবিত্র রাখার উপায়",
+        "হযরত হাসান বসরি (রহ.) (২১–১১০ হি.)",
+        "হযরত আবদুল কাদির জিলানি (রহ.) এবং হযরত বাহাউদ্দিন নকশবন্দ (রহ.)",
+        "হযরত মুঈনুদ্দিন চিশতি (রহ.) এবং হযরত শাহ আহমদ সিরহিন্দি (রহ.)",
+        "নৈতিক, অসাম্প্রদায়িক ও মানবিক মূল্যবোধ গঠনে তাসাউফের ভূমিকা"
+    ]
+}
+
 ];
 
 
@@ -506,6 +424,13 @@ const lessonContent = document.getElementById("lessonContent");
 
 
 /* =====================================================
+   CURRENT CHAPTERS
+===================================================== */
+
+let currentChapters = [];
+
+
+/* =====================================================
    CLASS
 ===================================================== */
 
@@ -516,9 +441,37 @@ classSelect.addEventListener("change", function(){
     lessonArea.classList.add("hidden");
     lessonContent.classList.add("hidden");
 
+    subjectSelect.value = "";
+
+    chapterSelect.innerHTML =
+        '<option value="">-- অধ্যায় নির্বাচন করুন --</option>';
+
+    lessonSelect.innerHTML =
+        '<option value="">-- পাঠ নির্বাচন করুন --</option>';
+
     if(this.value === "class11"){
 
         subjectArea.classList.remove("hidden");
+
+        subjectSelect.innerHTML = `
+            <option value="">-- বিষয় নির্বাচন করুন --</option>
+            <option value="islamic1">
+                ইসলাম শিক্ষা ১ম পত্র
+            </option>
+        `;
+
+    }
+
+    if(this.value === "class12"){
+
+        subjectArea.classList.remove("hidden");
+
+        subjectSelect.innerHTML = `
+            <option value="">-- বিষয় নির্বাচন করুন --</option>
+            <option value="islamic2">
+                ইসলাম শিক্ষা ২য় পত্র
+            </option>
+        `;
 
     }
 
@@ -534,23 +487,43 @@ subjectSelect.addEventListener("change", function(){
     chapterSelect.innerHTML =
         '<option value="">-- অধ্যায় নির্বাচন করুন --</option>';
 
-    if(this.value === "islamic"){
+    lessonArea.classList.add("hidden");
+    lessonContent.classList.add("hidden");
 
-        chapters.forEach(chapter => {
+    currentChapters = [];
 
-            const option = document.createElement("option");
+    if(this.value === "islamic1"){
+
+        currentChapters = chapters11;
+
+    }
+
+    if(this.value === "islamic2"){
+
+        currentChapters = chapters12;
+
+    }
+
+
+    if(currentChapters.length > 0){
+
+        currentChapters.forEach(chapter => {
+
+            const option =
+                document.createElement("option");
 
             option.value = chapter.id;
 
             option.textContent =
                 chapter.title +
-                (chapter.free ? " — FREE" : " — ৳৫০");
+                (chapter.free ? " — FREE" : " — ৳১৫");
 
             chapterSelect.appendChild(option);
 
         });
 
         chapterArea.classList.remove("hidden");
+
     }
 
 });
@@ -573,15 +546,14 @@ chapterSelect.addEventListener("change", function(){
     if(!chapterId) return;
 
     const chapter =
-        chapters.find(c => c.id === chapterId);
+        currentChapters.find(c => c.id === chapterId);
 
     if(!chapter) return;
 
 
-    /*
-       প্রথম অধ্যায় FREE
-       অন্য অধ্যায় PAID
-    */
+    /* =================================================
+       PAID CHAPTER
+    ================================================= */
 
     if(!chapter.free){
 
@@ -599,7 +571,7 @@ chapterSelect.addEventListener("change", function(){
                 ${chapter.pages}
             </div>
 
-            <span class="paid">PAID • ৳৫০</span>
+            <span class="paid">PAID • ৳১৫</span>
 
             <h2>এই অধ্যায়টি পড়তে Online Book কিনুন</h2>
 
@@ -612,7 +584,7 @@ chapterSelect.addEventListener("change", function(){
                 class="buy-btn"
                 href="${SHUKHIMART_URL}"
                 target="_blank">
-                Online Book কিনুন — ৳৫০
+                Online Book কিনুন — ৳১৫
             </a>
 
         `;
@@ -621,9 +593,9 @@ chapterSelect.addEventListener("change", function(){
     }
 
 
-    /*
+    /* =================================================
        FREE CHAPTER
-    */
+    ================================================= */
 
     chapter.lessons.forEach((lesson,index)=>{
 
@@ -664,18 +636,13 @@ lessonSelect.addEventListener("change", function(){
     }
 
     const chapter =
-        chapters.find(c => c.id === chapterId);
+        currentChapters.find(c => c.id === chapterId);
 
     if(!chapter) return;
 
     const lesson =
         chapter.lessons[lessonIndex];
 
-
-    /*
-       এখানে পরবর্তীতে প্রতিটি পাঠের
-       সম্পূর্ণ বিস্তারিত লেখা বসানো যাবে।
-    */
 
     lessonContent.classList.remove("hidden");
 
@@ -763,6 +730,3 @@ lessonSelect.addEventListener("change", function(){
 });
 
 </script>
-
-</body>
-</html>
